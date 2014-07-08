@@ -1,0 +1,336 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>登入</title>
+    <link href="~/Content/CSS/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/CSS/font-awesome.min.css" />
+    <link href="~/Content/CSS/niqiu.css" rel="stylesheet" />
+    <!--[if IE 7]>
+          <link rel="stylesheet" href="~/Content/CSS/font-awesome-ie7.min.css" />
+        <![endif]-->
+    <!-- page specific plugin styles -->
+    <!-- ace styles -->
+
+    <link rel="stylesheet" href="~/Content/CSS/ace.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/ace-rtl.min.css" />
+    <link rel="stylesheet" href="~/Content/CSS/ace-skins.min.css" />
+
+    <!--[if lte IE 8]>
+      <link rel="stylesheet" href="~/Content/CSS/ace-ie.min.css" />
+    <![endif]-->
+    <!-- inline styles related to this page -->
+    <!-- ace settings handler -->
+
+    <script src="~/Content/Js/ace-extra.min.js"></script>
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="~/Content/Js/html5shiv.js"></script>
+    <script src="~/Content/Js/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .s-skin-container {
+    background-attachment: fixed;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -10;
+}
+    </style>
+</head>
+    <body class="login-layout" >
+        <div class="s-skin-container" style="background-color: #404040; background-image: url('/Content/images/skin/150.jpg')"></div>
+        <div class="main-container">
+            <div class="main-content">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <div class="login-container">
+                            <div class="center">
+                                <h1>
+                                    <i class="icon-leaf green"></i>
+                                    <span class="red">Lxs</span>
+                                    <span class="white">后台管理系统</span>
+                                </h1>
+                            </div>
+                            <div class="space-6"></div>
+                            <div class="position-relative">
+                                <div id="login-box" class="login-box visible widget-box no-border">
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <h4 class="header blue lighter bigger">
+                                                <i class="icon-coffee green"></i>
+                                                欢迎登入
+                                            </h4>
+
+                                            <div class="space-6"></div>
+
+                                            <form>
+                                                <fieldset>
+                                                    <label class="block clearfix">
+                                                        <span class="block input-icon input-icon-right">
+                                                            <input type="text" class="form-control" placeholder="Username" />
+                                                            <i class="icon-user"></i>
+                                                        </span>
+                                                    </label>
+
+                                                    <label class="block clearfix">
+                                                        <span class="block input-icon input-icon-right">
+                                                            <input type="password" class="form-control" placeholder="Password" />
+                                                            <i class="icon-lock"></i>
+                                                        </span>
+                                                    </label>
+
+                                                    <div class="space"></div>
+
+                                                    <div class="clearfix">
+                                                        <label class="inline">
+                                                            <input type="checkbox" class="ace" />
+                                                            <span class="lbl"> 自动登录</span>
+                                                        </label>
+
+                                                        <button type="button" class="width-35 pull-right btn btn-sm btn-primary">
+                                                            <i class="icon-key"></i>
+                                                            登录
+                                                        </button>
+                                                    </div>
+
+                                                    <div class="space-4"></div>
+                                                </fieldset>
+                                            </form>
+                                            @*<div class="social-or-login center">
+                                                <span class="bigger-110">Or Login Using</span>
+                                            </div>
+
+                                            <div class="social-login center">
+                                                <a class="btn btn-primary">
+                                                    <i class="icon-facebook"></i>
+                                                </a>
+
+                                                <a class="btn btn-info">
+                                                    <i class="icon-twitter"></i>
+                                                </a>
+
+                                                <a class="btn btn-danger">
+                                                    <i class="icon-google-plus"></i>
+                                                </a>
+                                            </div>*@
+                                        </div><!-- /widget-main -->
+
+                                        @*<div class="toolbar clearfix">
+                                            <div>
+                                                <a href="#" onclick="show_box('forgot-box'); return false;" class="forgot-password-link">
+                                                    <i class="icon-arrow-left"></i>
+                                                    I forgot my password
+                                                </a>
+                                            </div>
+
+                                            <div>
+                                                <a href="#" onclick="show_box('signup-box'); return false;" class="user-signup-link">
+                                                    I want to register
+                                                    <i class="icon-arrow-right"></i>
+                                                </a>
+                                            </div>
+                                        </div>*@
+                                    </div><!-- /widget-body -->
+                                </div><!-- /login-box -->
+
+                                <div id="forgot-box" class="forgot-box widget-box no-border">
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <h4 class="header red lighter bigger">
+                                                <i class="icon-key"></i>
+                                                Retrieve Password
+                                            </h4>
+
+                                            <div class="space-6"></div>
+                                            <p>
+                                                Enter your email and to receive instructions
+                                            </p>
+
+                                            <form>
+                                                <fieldset>
+                                                    <label class="block clearfix">
+                                                        <span class="block input-icon input-icon-right">
+                                                            <input type="email" class="form-control" placeholder="Email" />
+                                                            <i class="icon-envelope"></i>
+                                                        </span>
+                                                    </label>
+
+                                                    <div class="clearfix">
+                                                        <button type="button" class="width-35 pull-right btn btn-sm btn-danger">
+                                                            <i class="icon-lightbulb"></i>
+                                                            Send Me!
+                                                        </button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div><!-- /widget-main -->
+
+                                        <div class="toolbar center">
+                                            <a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
+                                                Back to login
+                                                <i class="icon-arrow-right"></i>
+                                            </a>
+                                        </div>
+                                    </div><!-- /widget-body -->
+                                </div><!-- /forgot-box -->
+
+                                <div id="signup-box" class="signup-box widget-box no-border">
+                                    <div class="widget-body">
+                                        <div class="widget-main">
+                                            <h4 class="header green lighter bigger">
+                                                <i class="icon-group blue"></i>
+                                                New User Registration
+                                            </h4>
+
+                                            <div class="space-6"></div>
+                                            <p> Enter your details to begin: </p>
+
+                                            <form>
+                                                <fieldset>
+                                                    <label class="block clearfix">
+                                                        <span class="block input-icon input-icon-right">
+                                                            <input type="email" class="form-control" placeholder="Email" />
+                                                            <i class="icon-envelope"></i>
+                                                        </span>
+                                                    </label>
+
+                                                    <label class="block clearfix">
+                                                        <span class="block input-icon input-icon-right">
+                                                            <input type="text" class="form-control" placeholder="Username" />
+                                                            <i class="icon-user"></i>
+                                                        </span>
+                                                    </label>
+
+                                                    <label class="block clearfix">
+                                                        <span class="block input-icon input-icon-right">
+                                                            <input type="password" class="form-control" placeholder="Password" />
+                                                            <i class="icon-lock"></i>
+                                                        </span>
+                                                    </label>
+
+                                                    <label class="block clearfix">
+                                                        <span class="block input-icon input-icon-right">
+                                                            <input type="password" class="form-control" placeholder="Repeat password" />
+                                                            <i class="icon-retweet"></i>
+                                                        </span>
+                                                    </label>
+
+                                                    <label class="block">
+                                                        <input type="checkbox" class="ace" />
+                                                        <span class="lbl">
+                                                            I accept the
+                                                            <a href="#">User Agreement</a>
+                                                        </span>
+                                                    </label>
+
+                                                    <div class="space-24"></div>
+
+                                                    <div class="clearfix">
+                                                        <button type="reset" class="width-30 pull-left btn btn-sm">
+                                                            <i class="icon-refresh"></i>
+                                                            Reset
+                                                        </button>
+
+                                                        <button type="button" class="width-65 pull-right btn btn-sm btn-success">
+                                                            Register
+                                                            <i class="icon-arrow-right icon-on-right"></i>
+                                                        </button>
+                                                    </div>
+                                                </fieldset>
+                                            </form>
+                                        </div>
+
+                                        <div class="toolbar center">
+                                            <a href="#" onclick="show_box('login-box'); return false;" class="back-to-login-link">
+                                                <i class="icon-arrow-left"></i>
+                                                Back to login
+                                            </a>
+                                        </div>
+                                    </div><!-- /widget-body -->
+                                </div><!-- /signup-box -->
+                            </div><!-- /position-relative -->
+                        </div>
+                    </div><!-- /.col -->
+                </div><!-- /.row -->
+            </div>
+        </div><!-- /.main-container -->
+       
+        <!-- basic scripts -->
+        <!--[if !IE]>
+
+            <script src="~/Content/Js/jquery-2.0.3.min.js"></script>
+
+        <![endif]-->
+        <!--[if IE]>
+            <script src="~/Content/Js/jquery-1.10.2.min.js"></script>
+        <![endif]-->
+        <!--[if IE]>
+            <script type="text/javascript">
+                window.jQuery || document.write("<script src='~/Content/Js/jquery-1.10.2.min.js'>"+"<"+"/script>");
+            </script>
+        <![endif]-->
+
+        <script type="text/javascript">
+            if ("ontouchend" in document) document.write("<script src='~/Content/Js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+        </script>
+        <script src="~/Content/Js/bootstrap.min.js"></script>
+        <script src="~/Content/Js/typeahead-bs2.min.js"></script>
+
+        <!-- page specific plugin scripts -->
+
+        <script src="~/Content/Js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script src="~/Content/Js/jquery.ui.touch-punch.min.js"></script>
+        <script src="~/Content/Js/bootbox.min.js"></script>
+
+        <!-- ace scripts -->
+
+        <script src="~/Content/Js/ace-elements.min.js"></script>
+        <script src="~/Content/Js/ace.min.js"></script>
+
+        <!-- inline scripts related to this page -->
+
+        <script type="text/javascript">
+            jQuery(function ($) {
+
+                /* initialize the external events
+                -----------------------------------------------------------------*/
+
+                $('#external-events div.external-event').each(function () {
+
+                    // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+                    // it doesn't need to have a start or end
+                    var eventObject = {
+                        title: $.trim($(this).text()) // use the element's text as the event title
+                    };
+
+                    // store the Event Object in the DOM element so we can get to it later
+                    $(this).data('eventObject', eventObject);
+
+                    // make the event draggable using jQuery UI
+                    $(this).draggable({
+                        zIndex: 999,
+                        revert: true,      // will cause the event to go back to its
+                        revertDuration: 0  //  original position after the drag
+                    });
+
+                });
+
+                /* initialize the calendar
+            -----------------------------------------------------------------*/
+            })
+        </script>
+    </body>
+
+</html>
