@@ -131,11 +131,17 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Models\Catalog\CategoryListModel.cs" />
+    <Compile Include="Models\Catalog\CategoryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\font\fontawesome-webfont.woff" />
+    <Content Include="Content\images\qita\active-false.gif" />
+    <Content Include="Content\images\qita\active-true.gif" />
     <Content Include="Content\uploadify\uploadify.php" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Content\avatars\avatar.png" />
@@ -271,15 +277,30 @@
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\Category\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\UploadFiles\" />
     <Folder Include="Content\uploadify\__MACOSX\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Lxs.Core\Lxs.Core.csproj">
+      <Project>{b8582872-f964-43d7-a328-b6ce78d46b96}</Project>
+      <Name>Lxs.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Lxs.Data\Lxs.Data.csproj">
+      <Project>{2a110d50-4741-459e-b5f0-df418cc9f5ff}</Project>
+      <Name>Lxs.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lxs.Web.Framework\Lxs.Web.Framework.csproj">
+      <Project>{c79607fe-2f28-4096-af22-01d48e1854b9}</Project>
+      <Name>Lxs.Web.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

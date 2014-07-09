@@ -15,6 +15,10 @@ namespace Lxs.Admin.Controllers
         {
             return View();
         }
+        public ActionResult Logout()
+        {
 
+            return Redirect(Url.Action("Login"));
+        }
     }
 }

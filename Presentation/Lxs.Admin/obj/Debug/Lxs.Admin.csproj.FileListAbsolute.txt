@@ -47,3 +47,9 @@ E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\bin\zh-Hans\System.Web.WebPages.Razor.r
 E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\obj\Debug\Lxs.Admin.csprojResolveAssemblyReference.cache
 E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\obj\Debug\Lxs.Admin.dll
 E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\obj\Debug\Lxs.Admin.pdb
+E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\bin\Lxs.Web.Framework.dll
+E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\bin\Lxs.Web.Framework.pdb
+E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\bin\Lxs.Core.dll
+E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\bin\Lxs.Data.dll
+E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\bin\Lxs.Core.pdb
+E:\web\gxm\LxsWeb\Presentation\Lxs.Admin\bin\Lxs.Data.pdb

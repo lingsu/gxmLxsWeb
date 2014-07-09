@@ -97,3 +97,7 @@ E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\EntityFramework.SqlServer.dll
 E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\EntityFramework.SqlServer.xml
 E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\Newtonsoft.Json.xml
 E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
+E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\Lxs.Web.Framework.dll
+E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\Lxs.Web.Framework.pdb
+E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\Lxs.Core.dll
+E:\web\gxm\LxsWeb\Presentation\LxsWeb\bin\Lxs.Core.pdb
