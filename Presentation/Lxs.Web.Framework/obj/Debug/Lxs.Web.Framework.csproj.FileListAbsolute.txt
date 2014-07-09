@@ -1,0 +1,5 @@
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Web.Framework\bin\Debug\Lxs.Web.Framework.dll
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Web.Framework\bin\Debug\Lxs.Web.Framework.pdb
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Web.Framework\obj\Debug\Lxs.Web.Framework.csprojResolveAssemblyReference.cache
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Web.Framework\obj\Debug\Lxs.Web.Framework.dll
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Web.Framework\obj\Debug\Lxs.Web.Framework.pdb

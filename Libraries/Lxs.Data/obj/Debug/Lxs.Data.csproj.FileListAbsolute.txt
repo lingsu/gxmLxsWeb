@@ -1,0 +1,5 @@
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Data\bin\Debug\Lxs.Data.dll
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Data\bin\Debug\Lxs.Data.pdb
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Data\obj\Debug\Lxs.Data.csprojResolveAssemblyReference.cache
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Data\obj\Debug\Lxs.Data.dll
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Data\obj\Debug\Lxs.Data.pdb

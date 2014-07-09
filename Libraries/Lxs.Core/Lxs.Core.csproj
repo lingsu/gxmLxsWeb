@@ -42,6 +42,10 @@
     <Compile Include="BaseEntity.cs" />
     <Compile Include="Domain\Catalog\Category.cs" />
     <Compile Include="Domain\Customers\Customer.cs" />
+    <Compile Include="Events\EntityDeleted.cs" />
+    <Compile Include="Events\EntityInserted.cs" />
+    <Compile Include="Events\EntityUpdated.cs" />
+    <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
