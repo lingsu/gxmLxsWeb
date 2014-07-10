@@ -6,6 +6,8 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
+using Lxs.Core.Infrastructure;
+using Lxs.Web.Framework.Mvc;
 
 namespace LxsWeb
 {
@@ -16,6 +18,13 @@ namespace LxsWeb
     {
         protected void Application_Start()
         {
+            //initialize engine context
+            EngineContext.Initialize(false);
+
+            //set dependency resolver
+            var dependencyResolver = new LxsDependencyResolver();
+            DependencyResolver.SetResolver(dependencyResolver);
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

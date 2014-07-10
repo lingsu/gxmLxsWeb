@@ -1,0 +1,16 @@
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Lxs.Services.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Lxs.Services.pdb
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\obj\Debug\Lxs.Services.csprojResolveAssemblyReference.cache
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\obj\Debug\Lxs.Services.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\obj\Debug\Lxs.Services.pdb
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Lxs.Core.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Lxs.Data.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Autofac.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Autofac.Integration.Mvc.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\EntityFramework.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Lxs.Core.pdb
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Lxs.Data.pdb
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Autofac.xml
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\Autofac.Integration.Mvc.xml
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\EntityFramework.xml
+E:\github\gxmLxsWeb\Libraries\Lxs.Services\bin\Debug\zh-Hans\EntityFramework.resources.dll

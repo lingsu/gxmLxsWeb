@@ -236,9 +236,25 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\Lxs.Core\Lxs.Core.csproj">
+      <Project>{b8582872-f964-43d7-a328-b6ce78d46b96}</Project>
+      <Name>Lxs.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Lxs.Data\Lxs.Data.csproj">
+      <Project>{2a110d50-4741-459e-b5f0-df418cc9f5ff}</Project>
+      <Name>Lxs.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\Lxs.Services\Lxs.Services.csproj">
+      <Project>{2e21d553-d2bc-44ac-b077-319e8264b6fa}</Project>
+      <Name>Lxs.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Lxs.Admin\Lxs.Admin.csproj">
       <Project>{5bd38136-be73-4793-8a61-d45ae135486e}</Project>
       <Name>Lxs.Admin</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Lxs.Web.Framework\Lxs.Web.Framework.csproj">
+      <Project>{c79607fe-2f28-4096-af22-01d48e1854b9}</Project>
+      <Name>Lxs.Web.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
