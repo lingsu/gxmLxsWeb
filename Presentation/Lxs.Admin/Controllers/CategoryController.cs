@@ -43,5 +43,10 @@ namespace Lxs.Admin.Controllers
             return Json(gridModel);
         }
 
+
+        public ActionResult Create()
+        {
+            return View();
+        }
     }
 }

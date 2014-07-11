@@ -39,10 +39,11 @@
         </div><!-- /.page-header -->
         
         <div class="row">
-            <div class="col-lg-12" style="margin-bottom: 5px;">
+            <div class="col-lg-3" style="margin-bottom: 5px;">
                 @Html.TextBoxFor(x => x.SearchCategoryName, new { placeholder = "分类名称" })
                 <a class="fm-button ui-state-default ui-corner-all fm-button-icon-right btn btn-sm btn-purple" id="searchButton" href="javascript:void(0)"><span class="icon-search"></span>搜索</a>
             </div>
+            <div class="col-lg-9"><a href="@Url.Action("Create")" class="btn btn-link">添加</a></div>
             <div class="col-xs-12">
                 <!-- PAGE CONTENT BEGINS -->
 

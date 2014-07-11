@@ -172,3 +172,12 @@ E:\github\gxmLxsWeb\Presentation\Lxs.Admin\bin\AutoMapper.dll
 E:\github\gxmLxsWeb\Presentation\Lxs.Admin\bin\Lxs.Services.dll
 E:\github\gxmLxsWeb\Presentation\Lxs.Admin\bin\Lxs.Services.pdb
 E:\github\gxmLxsWeb\Presentation\Lxs.Admin\bin\AutoMapper.xml
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\AutoMapper.Net4.dll
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\AutoMapper.dll
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\Lxs.Services.dll
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\Autofac.dll
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\Autofac.Integration.Mvc.dll
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\Lxs.Services.pdb
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\AutoMapper.xml
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\Autofac.xml
+F:\GitHub\gxmLxsWeb\Presentation\Lxs.Admin\bin\Autofac.Integration.Mvc.xml

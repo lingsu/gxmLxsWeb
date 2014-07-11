@@ -12,3 +12,7 @@ E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.dll
 E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.Integration.Mvc.dll
 E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.xml
 E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.Integration.Mvc.xml
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.dll
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.Integration.Mvc.dll
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.xml
+F:\GitHub\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.Integration.Mvc.xml

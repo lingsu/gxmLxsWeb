@@ -220,3 +220,14 @@ E:\github\gxmLxsWeb\Presentation\LxsWeb\bin\Autofac.Integration.Mvc.xml
 E:\github\gxmLxsWeb\Presentation\LxsWeb\bin\AutoMapper.Net4.dll
 E:\github\gxmLxsWeb\Presentation\LxsWeb\bin\AutoMapper.dll
 E:\github\gxmLxsWeb\Presentation\LxsWeb\bin\AutoMapper.xml
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\AutoMapper.Net4.dll
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Lxs.Data.dll
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Lxs.Services.dll
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Autofac.dll
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Autofac.Integration.Mvc.dll
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\AutoMapper.dll
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Lxs.Data.pdb
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Lxs.Services.pdb
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Autofac.xml
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\Autofac.Integration.Mvc.xml
+F:\GitHub\gxmLxsWeb\Presentation\LxsWeb\bin\AutoMapper.xml
