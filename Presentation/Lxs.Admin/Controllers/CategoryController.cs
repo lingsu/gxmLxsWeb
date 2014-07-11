@@ -28,20 +28,6 @@ namespace Lxs.Admin.Controllers
         [HttpPost]
         public ActionResult List(DataSourceRequest command, CategoryListModel model)
         {
-            
-            //var categories = _categoryService.GetAllCategories(model.SearchCategoryName,
-            //    command.Page - 1, command.PageSize, true);
-            //var gridModel = new DataSourceResult
-            //{
-            //    Data = categories.Select(x =>
-            //    {
-            //        var categoryModel = x.ToModel();
-            //        categoryModel.Breadcrumb = x.GetFormattedBreadCrumb(_categoryService);
-            //        return categoryModel;
-            //    }),
-            //    Total = categories.TotalCount
-            //};
-
             var categories = _categoryService.GetAllCategories(model.SearchCategoryName,
                  command.Page - 1, command.PageSize, true);
             var gridModel = new DataSourceResult
