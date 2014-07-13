@@ -139,9 +139,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\Catalog\CategoryListModel.cs" />
     <Compile Include="Models\Catalog\CategoryModel.cs" />
+    <Compile Include="Models\Customers\CustomerModel.cs" />
     <Compile Include="Models\Infrastructure\AutoMapperStartupTask.cs" />
     <Compile Include="Models\MappingExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -288,6 +290,8 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Category\List.cshtml" />
+    <Content Include="Views\Customer\List.cshtml" />
+    <Content Include="Views\Customer\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
