@@ -3,52 +3,17 @@ using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.Entity;
 using System.Data.Entity.Infrastructure;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Lxs.Data.Initializers;
 
 namespace Lxs.Data
 {
     public class SqlServerDataProvider : IDataProvider
     {
-        public void InitConnectionFactory()
-        {
-            var connectionFactory = new SqlConnectionFactory();
-
-            #pragma warning disable 618
-            Database.DefaultConnectionFactory = connectionFactory;
-        }
-
-        public void SetDatabaseInitializer()
-        {
-            //pass some table names to ensure that we have nopCommerce 2.X installed
-            var tablesToValidate = new[] { "Customer", "Discount", "Order", "Product", "ShoppingCartItem" };
-
-            //custom commands (stored proedures, indexes)
-
-            //var customCommands = new List<string>();
-            ////use webHelper.MapPath instead of HostingEnvironment.MapPath which is not available in unit tests
-            //customCommands.AddRange(ParseCommands(HostingEnvironment.MapPath("~/App_Data/SqlServer.Indexes.sql"), false));
-            ////use webHelper.MapPath instead of HostingEnvironment.MapPath which is not available in unit tests
-            //customCommands.AddRange(ParseCommands(HostingEnvironment.MapPath("~/App_Data/SqlServer.StoredProcedures.sql"), false));
-
-            //var initializer = new CreateTablesIfNotExist<NopObjectContext>(tablesToValidate, customCommands.ToArray());
-            //Database.SetInitializer(initializer);
-        }
-
-        public void InitDatabase()
-        {
-            InitConnectionFactory();
-            SetDatabaseInitializer();
-        }
-
-        public bool StoredProceduredSupported { get; private set; }
-        public DbParameter GetParameter()
-        {
-            throw new NotImplementedException();
-        }
-
-
+        #region Utilities
 
         protected virtual string[] ParseCommands(string filePath, bool throwExceptionIfNonExists)
         {
@@ -100,6 +65,69 @@ namespace Lxs.Data
 
             return sb.ToString();
         }
+
+        #endregion
+
+        #region Methods
+
+        /// <summary>
+        /// Initialize connection factory
+        /// </summary>
+        public virtual void InitConnectionFactory()
+        {
+            var connectionFactory = new SqlConnectionFactory();
+            //TODO fix compilation warning (below)
+#pragma warning disable 0618
+            Database.DefaultConnectionFactory = connectionFactory;
+        }
+
+        /// <summary>
+        /// Initialize database
+        /// </summary>
+        public virtual void InitDatabase()
+        {
+            InitConnectionFactory();
+            SetDatabaseInitializer();
+        }
+
+        /// <summary>
+        /// Set database initializer
+        /// </summary>
+        public virtual void SetDatabaseInitializer()
+        {
+            //pass some table names to ensure that we have nopCommerce 2.X installed
+            var tablesToValidate = new[] { "Customer", "Discount", "Order", "Product", "ShoppingCartItem" };
+
+            //custom commands (stored proedures, indexes)
+
+            var customCommands = new List<string>();
+            //use webHelper.MapPath instead of HostingEnvironment.MapPath which is not available in unit tests
+            //customCommands.AddRange(ParseCommands(HostingEnvironment.MapPath("~/App_Data/SqlServer.Indexes.sql"), false));
+            //use webHelper.MapPath instead of HostingEnvironment.MapPath which is not available in unit tests
+           // customCommands.AddRange(ParseCommands(HostingEnvironment.MapPath("~/App_Data/SqlServer.StoredProcedures.sql"), false));
+
+            var initializer = new CreateTablesIfNotExist<LxsObjectContext>(tablesToValidate, customCommands.ToArray());
+            Database.SetInitializer(initializer);
+        }
+
+        /// <summary>
+        /// A value indicating whether this data provider supports stored procedures
+        /// </summary>
+        public virtual bool StoredProceduredSupported
+        {
+            get { return true; }
+        }
+
+        /// <summary>
+        /// Gets a support database parameter object (used by stored procedures)
+        /// </summary>
+        /// <returns>Parameter</returns>
+        public virtual DbParameter GetParameter()
+        {
+            return new SqlParameter();
+        }
+
+        #endregion
     }
 
 }

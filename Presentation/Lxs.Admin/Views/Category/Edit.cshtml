@@ -1,0 +1,47 @@
+﻿@model CategoryModel
+@{
+    ViewBag.Title = "添加新的分类";
+}
+@section styles{
+    <link type="text/css" rel="stylesheet" href="/Scripts/fineuploader/fineuploader-4.2.2.min.css">
+}
+
+<div class="main-content">
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "category-form" }))
+    {
+        @Html.ValidationSummary()
+        <div class="breadcrumbs" id="breadcrumbs">
+            <script type="text/javascript">
+                try {
+                    ace.settings.check('breadcrumbs', 'fixed');
+                } catch (e) {
+                }
+            </script>
+            <ul class="breadcrumb">
+                <li>
+                    <i class="icon-home home-icon"></i>
+                    <a href="@Url.Action("Index", "Home")">首页</a>
+                </li>
+                <li id="currentpart" class="active">
+                    商品分类管理 <small>
+                        <i class="icon-double-angle-right"></i>
+                        <input type="submit" name="save" value="保存" />
+                        <input type="submit" name="save-continue" value="保存并继续编辑" />
+                    </small>
+                </li>
+            </ul><!-- .breadcrumb -->
+        </div>
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    商品分类管理
+                </h1>
+            </div><!-- /.page-header -->
+            @Html.Partial("_CreateOrUpdate", Model)
+        </div>
+    }
+</div>
+
+@section scripts{
+    @Scripts.Render("~/bundles/jqueryval")
+}

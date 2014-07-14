@@ -7,8 +7,9 @@
 }
 
 <div class="main-content">
-    @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "category-form" }))
+    @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "category-form",onsubmit="return tjhtml()" }))
     {
+        @Html.ValidationSummary()
         <div class="breadcrumbs" id="breadcrumbs">
             <script type="text/javascript">
                 try {
@@ -23,13 +24,21 @@
                 </li>
                 <li id="currentpart" class="active">
                     商品分类管理 <small>
-                        <i class="icon-double-angle-right"></i>
-                        <input type="submit" value="保存" />
+                        <i class="icon-double-angle-right pull-right"></i>
+                        <input type="submit" name="save" value="保存" />
+                        <input type="submit" name="save-continue" value="保存并继续编辑" />
                     </small>
                 </li>
             </ul><!-- .breadcrumb -->
         </div>
-        @Html.Partial("_CreateOrUpdate", Model)
+        <div class="page-content">
+            <div class="page-header">
+                <h1>
+                    商品分类管理
+                </h1>
+            </div><!-- /.page-header -->
+            @Html.Partial("_CreateOrUpdate", Model)
+        </div>
     }
 </div>
 

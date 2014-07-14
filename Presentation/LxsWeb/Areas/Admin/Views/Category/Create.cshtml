@@ -9,6 +9,7 @@
 <div class="main-content">
     @using (Html.BeginForm(null, null, FormMethod.Post, new { id = "category-form" }))
     {
+        @Html.ValidationSummary()
         <div class="breadcrumbs" id="breadcrumbs">
             <script type="text/javascript">
                 try {
@@ -24,7 +25,8 @@
                 <li id="currentpart" class="active">
                     商品分类管理 <small>
                         <i class="icon-double-angle-right"></i>
-                        <input type="submit" value="保存" />
+                               <input type="submit" name="save" value="保存" />
+                               <input type="submit" name="save-continue" value="保存并继续编辑" />
                     </small>
                 </li>
             </ul><!-- .breadcrumb -->

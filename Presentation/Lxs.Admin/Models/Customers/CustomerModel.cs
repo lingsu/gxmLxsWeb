@@ -21,7 +21,7 @@ namespace Lxs.Admin.Models.Customers
 
         //customer roles
         public string CustomerRoleNames { get; set; }
-        public List<CustomerRoleModel> AvailableCustomerRoles { get; set; }
+        //public List<CustomerRoleModel> AvailableCustomerRoles { get; set; }
         public int[] SelectedCustomerRoleIds { get; set; }
     }
 }

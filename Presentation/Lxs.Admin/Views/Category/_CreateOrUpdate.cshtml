@@ -1,13 +1,9 @@
-﻿@model CategoryModel
+﻿@using Lxs.Web.Framework
+@model CategoryModel
 
 @Html.HiddenFor(model => model.Id)
 
-<div class="page-content">
-    <div class="page-header">
-        <h1>
-            商品分类管理
-        </h1>
-    </div><!-- /.page-header -->
+<input type="hidden" name="Description" id="Description" value="" />
 
     <div class="row">
         <div class="col-xs-12">
@@ -33,7 +29,8 @@
                     <div class="form-group">
                         <label for="Name" class="col-sm-2 control-label no-padding-right"> 名称 </label>
                         <div class="col-sm-10">
-                            <input type="text" class="col-xs-10 col-sm-5" placeholder="名称" id="Name" value="@Model.Name">
+                            @Html.TextBoxFor(x => x.Name, new { @class = "col-xs-10 col-sm-5" })
+                            @Html.ValidationMessageFor(x=>x.Name)
                         </div>
                     </div>
                     <div class="space-4"></div>
@@ -89,10 +86,7 @@
                         <label for="Name" class="col-sm-2 control-label no-padding-right"> 已发布 </label>
                         <div class="col-sm-10">
                             <div class="control-group">
-                                <label>
-                                    <input type="checkbox" class="ace" name="form-field-checkbox">
-                                    <span class="lbl"></span>
-                                </label>
+                                @Html.LxsCheckBoxFor(x => x.Published)
                             </div>
                         </div>
                     </div>
@@ -102,7 +96,8 @@
                         <div class="col-sm-10">
                             <div class="ace-spinner" style="width: 70px;">
                                 <div class="input-group">
-                                    <input type="text" id="spinner1" class="input-mini spinner-input form-control" value="43" maxlength="3">
+                                    @Html.TextBoxFor(x=>x.DisplayOrder,new {@class="input-mini spinner-input form-control", value="43" ,maxlength="3"})
+                                    <span class="lbl"></span>
                                 </div>
                             </div>
 
@@ -113,21 +108,21 @@
                     <div class="form-group">
                         <label for="Name" class="col-sm-2 control-label no-padding-right"> META关键字 </label>
                         <div class="col-sm-10">
-                            <input type="text" class="col-xs-10 col-sm-5" id="Name" value="@Model.MetaKeywords">
+                            <input type="text" class="col-xs-10 col-sm-5" id="MetaKeywords" value="@Model.MetaKeywords">
                         </div>
                     </div>
                     <div class="space-4"></div>
                     <div class="form-group">
                         <label for="Name" class="col-sm-2 control-label no-padding-right"> META描述 </label>
                         <div class="col-sm-10">
-                            <input type="text" class="col-xs-10 col-sm-5" id="Name" value="@Model.MetaDescription">
+                            <input type="text" class="col-xs-10 col-sm-5" id="MetaDescription" value="@Model.MetaDescription">
                         </div>
                     </div>
                     <div class="space-4"></div>
                     <div class="form-group">
                         <label for="Name" class="col-sm-2 control-label no-padding-right"> META标题 </label>
                         <div class="col-sm-10">
-                            <input type="text" class="col-xs-10 col-sm-5" id="Name" value="@Model.MetaTitle">
+                            <input type="text" class="col-xs-10 col-sm-5" id="MetaTitle" value="@Model.MetaTitle">
                         </div>
                     </div>
                     <div class="space-4"></div>
@@ -141,12 +136,10 @@
                     {
                         <text>您需要先保存才能进一步操作 </text>
                     }
-                   
                 </div>
             </div>
         </div><!-- /.col -->
     </div><!-- /.row -->
-</div>
 
 
 <script src="/Content/js/markdown/markdown.min.js"></script>
@@ -168,7 +161,7 @@
         //$('#editor1').ace_wysiwyg();//this will create the default editor will all buttons
 
         //but we want to change a few buttons colors for the third style
-        $('#Description').ace_wysiwyg({
+        $('#editor1').ace_wysiwyg({
             toolbar:
             [
                 'font',
@@ -212,7 +205,7 @@
         $('[data-toggle="buttons"] .btn').on('click', function (e) {
             var target = $(this).find('input[type=radio]');
             var which = parseInt(target.val());
-            var toolbar = $('#Description').prev().get(0);
+            var toolbar = $('#editor1').prev().get(0);
             if (which == 1 || which == 2 || which == 3) {
                 toolbar.className = toolbar.className.replace(/wysiwyg\-style(1|2)/g, '');
                 if (which == 1) $(toolbar).addClass('wysiwyg-style1');
@@ -343,9 +336,13 @@
 <script src="/Content/js/fuelux/fuelux.spinner.min.js"></script>
 <script type="text/javascript">
     $(function () {
-        $('#spinner1').ace_spinner({ value: @Model.DisplayOrder, min: 0, max: 9999, step: 1, btn_up_class: 'btn-info', btn_down_class: 'btn-info' })
+        $('#DisplayOrder').ace_spinner({ value: @Model.DisplayOrder, min: 0, max: 9999, step: 1, btn_up_class: 'btn-info', btn_down_class: 'btn-info' })
             .on('change', function () {
                 //alert(this.value)
             });
     })
+
+    function tjhtml() {
+        $("#Description").val($("#editor1").html());
+    }
 </script>

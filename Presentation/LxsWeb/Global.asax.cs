@@ -24,7 +24,7 @@ namespace LxsWeb
             //set dependency resolver
             var dependencyResolver = new LxsDependencyResolver();
             DependencyResolver.SetResolver(dependencyResolver);
-
+            //DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
 
             AreaRegistration.RegisterAllAreas();
@@ -33,6 +33,7 @@ namespace LxsWeb
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+
         }
     }
 }

@@ -20,5 +20,11 @@ namespace Lxs.Services.Catalog
         /// <returns>Categories</returns>
         IPagedList<Category> GetAllCategories(string categoryName = "",
             int pageIndex = 0, int pageSize = int.MaxValue, bool showHidden = false);
+
+
+
+        void InsertCategory(Category category);
+
+        void UpdateCategory(Category category);
     }
 }

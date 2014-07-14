@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,6 +14,7 @@ namespace Lxs.Admin.Models.Catalog
         {
             AvailableCategories = new List<SelectListItem>();
         }
+        [Required(ErrorMessage = "请输入分类名称")]
         public string Name { get; set; }
         public int DisplayOrder { get; set; }
         public bool Published { get; set; }

@@ -36,6 +36,9 @@ namespace Lxs.Web.Framework
                 .As<HttpSessionStateBase>()
                 .InstancePerHttpRequest();
 
+           // builder.RegisterModule(new AutofacWebTypesModule());
+
+
             //web helper
             builder.RegisterType<WebHelper>().As<IWebHelper>().InstancePerHttpRequest();
 
@@ -43,7 +46,7 @@ namespace Lxs.Web.Framework
             builder.RegisterControllers(typeFinder.GetAssemblies().ToArray());
 
             //data layer
-            builder.Register<IDbContext>(c => new LxsObjectContext("lxs")).InstancePerHttpRequest();
+            builder.Register<IDbContext>(c => new LxsObjectContext("Data Source=.;Initial Catalog=lxsweb;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=123456;MultipleActiveResultSets=True")).InstancePerHttpRequest();
             builder.RegisterGeneric(typeof(EfRepository<>)).As(typeof(IRepository<>)).InstancePerHttpRequest();
             builder.RegisterType<CategoryService>().As<ICategoryService>().InstancePerHttpRequest();
         }

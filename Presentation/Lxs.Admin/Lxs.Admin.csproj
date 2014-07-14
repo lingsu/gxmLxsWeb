@@ -291,9 +291,9 @@
     <Content Include="Views\Category\_CreateOrUpdate.cshtml" />
     <Content Include="Views\Customer\List.cshtml" />
     <Content Include="Views\Customer\Create.cshtml" />
+    <Content Include="Views\Category\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Content\UploadFiles\" />
     <Folder Include="Content\uploadify\__MACOSX\" />
   </ItemGroup>

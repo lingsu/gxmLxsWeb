@@ -37,6 +37,8 @@ namespace Lxs.Core.Domain.Catalog
         /// </summary>
         public string MetaTitle { get; set; }
 
+
+
         /// <summary>
         /// Gets or sets the parent category identifier
         /// </summary>

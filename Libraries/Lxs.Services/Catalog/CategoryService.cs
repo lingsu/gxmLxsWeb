@@ -90,5 +90,22 @@ namespace Lxs.Services.Catalog
             //paging
             return new PagedList<Category>(sortedCategories, pageIndex, pageSize);
         }
+
+        public void InsertCategory(Category category)
+        {
+            if (category == null)
+                throw new ArgumentNullException("category");
+
+            _categoryRepository.Insert(category);
+
+        }
+
+        public void UpdateCategory(Category category)
+        {
+            if (category == null)
+                throw new ArgumentNullException("category");
+
+            _categoryRepository.Update(category);
+        }
     }
 }

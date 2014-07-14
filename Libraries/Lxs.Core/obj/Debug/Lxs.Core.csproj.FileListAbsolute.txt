@@ -16,3 +16,12 @@ E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.Integration.Mvc.xml
 E:\github\gxmLxsWeb\Libraries\Lxs.Core\obj\Debug\Lxs.Core.csprojResolveAssemblyReference.cache
 E:\github\gxmLxsWeb\Libraries\Lxs.Core\obj\Debug\Lxs.Core.dll
 E:\github\gxmLxsWeb\Libraries\Lxs.Core\obj\Debug\Lxs.Core.pdb
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Lxs.Core.dll
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Lxs.Core.pdb
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.dll
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.Integration.Mvc.dll
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.xml
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\bin\Debug\Autofac.Integration.Mvc.xml
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\obj\Debug\Lxs.Core.csprojResolveAssemblyReference.cache
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\obj\Debug\Lxs.Core.dll
+E:\GitHubClonePath\gxmLxsWeb\Libraries\Lxs.Core\obj\Debug\Lxs.Core.pdb
