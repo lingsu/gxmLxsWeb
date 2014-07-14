@@ -10,7 +10,8 @@ namespace Lxs.Web.Framework.Mvc
     {
         public object GetService(Type serviceType)
         {
-            return EngineContext.Current.ContainerManager.ResolveOptional(serviceType);
+            var model=EngineContext.Current.ContainerManager.ResolveOptional(serviceType);
+            return model;
         }
 
         public IEnumerable<object> GetServices(Type serviceType)

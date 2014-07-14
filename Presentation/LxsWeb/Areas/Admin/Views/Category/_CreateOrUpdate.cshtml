@@ -1,0 +1,351 @@
+﻿@model CategoryModel
+
+@Html.HiddenFor(model => model.Id)
+
+<div class="page-content">
+    <div class="page-header">
+        <h1>
+            商品分类管理
+        </h1>
+    </div><!-- /.page-header -->
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="nav nav-tabs" id="myTab">
+                <li class="active">
+                    <a data-toggle="tab" href="#home">
+                        基本信息
+                    </a>
+                </li>
+                <li class="">
+                    <a data-toggle="tab" href="#profile">
+                        搜索引擎优化
+                    </a>
+                </li>
+                <li>
+                    <a data-toggle="tab" href="#good">
+                        商品
+                    </a>
+                </li>
+            </ul>
+            <div class="tab-content form-horizontal">
+                <div id="home" class="tab-pane active">
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> 名称 </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="col-xs-10 col-sm-5" placeholder="名称" id="Name" value="@Model.Name">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Description" class="col-sm-2 control-label no-padding-right"> 描述 </label>
+                        <div class="col-sm-10">
+                            <div class="wysiwyg-editor" id="Description">@Html.Raw(Model.Description)</div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Picture" class="col-sm-2 control-label no-padding-right"> 图片 </label>
+                        <div class="col-sm-10">
+                            <div id="picture753169306value">
+                                @Html.HiddenFor(x => x.Picture)
+                            </div>
+                            <div id="picture753169306image">
+                                <img src="/content/images/default-image_100.gif">
+                            </div>
+                            <span style="display:none;" class="btn btn-white" id="picture753169306remove">删除图片</span>
+                            <div id="picture753169306"></div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> 父级分类 </label>
+                        <div class="col-sm-3">
+                            @Html.DropDownListFor(model => model.ParentCategoryId, Model.AvailableCategories, new { @class = "form-control" })
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> 价格范围 </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="col-xs-10 col-sm-5" id="Name" value="@Model.Name">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> 首页显示 </label>
+                        <div class="col-sm-10">
+                            <div class="control-group">
+                                <label>
+                                    <input type="checkbox" class="ace" name="form-field-checkbox">
+                                    <span class="lbl"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> 已发布 </label>
+                        <div class="col-sm-10">
+                            <div class="control-group">
+                                <label>
+                                    <input type="checkbox" class="ace" name="form-field-checkbox">
+                                    <span class="lbl"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> 显示顺序 </label>
+                        <div class="col-sm-10">
+                            <div class="ace-spinner" style="width: 70px;">
+                                <div class="input-group">
+                                    <input type="text" id="spinner1" class="input-mini spinner-input form-control" value="43" maxlength="3">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div id="profile" class="tab-pane">
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> META关键字 </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="col-xs-10 col-sm-5" id="Name" value="@Model.MetaKeywords">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> META描述 </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="col-xs-10 col-sm-5" id="Name" value="@Model.MetaDescription">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                    <div class="form-group">
+                        <label for="Name" class="col-sm-2 control-label no-padding-right"> META标题 </label>
+                        <div class="col-sm-10">
+                            <input type="text" class="col-xs-10 col-sm-5" id="Name" value="@Model.MetaTitle">
+                        </div>
+                    </div>
+                    <div class="space-4"></div>
+                </div>
+                <div id="good" class="tab-pane">
+                    @if (Model.Id > 0)
+                    {
+
+                    }
+                    else
+                    {
+                        <text>您需要先保存才能进一步操作 </text>
+                    }
+                   
+                </div>
+            </div>
+        </div><!-- /.col -->
+    </div><!-- /.row -->
+</div>
+
+
+<script src="/Content/js/markdown/markdown.min.js"></script>
+<script src="/Content/js/markdown/bootstrap-markdown.min.js"></script>
+<script src="/Content/js/jquery.hotkeys.min.js"></script>
+<script src="/Content/js/bootstrap-wysiwyg.min.js"></script>
+<script type="text/javascript">
+    jQuery(function ($) {
+        function showErrorAlert(reason, detail) {
+            var msg = '';
+            if (reason === 'unsupported-file-type') { msg = "Unsupported format " + detail; }
+            else {
+                console.log("error uploading file", reason, detail);
+            }
+            $('<div class="alert"> <button type="button" class="close" data-dismiss="alert">&times;</button>' +
+                '<strong>File upload error</strong> ' + msg + ' </div>').prependTo('#alerts');
+        }
+
+        //$('#editor1').ace_wysiwyg();//this will create the default editor will all buttons
+
+        //but we want to change a few buttons colors for the third style
+        $('#Description').ace_wysiwyg({
+            toolbar:
+            [
+                'font',
+                null,
+                'fontSize',
+                null,
+                { name: 'bold', className: 'btn-info' },
+                { name: 'italic', className: 'btn-info' },
+                { name: 'strikethrough', className: 'btn-info' },
+                { name: 'underline', className: 'btn-info' },
+                null,
+                { name: 'insertunorderedlist', className: 'btn-success' },
+                { name: 'insertorderedlist', className: 'btn-success' },
+                { name: 'outdent', className: 'btn-purple' },
+                { name: 'indent', className: 'btn-purple' },
+                null,
+                { name: 'justifyleft', className: 'btn-primary' },
+                { name: 'justifycenter', className: 'btn-primary' },
+                { name: 'justifyright', className: 'btn-primary' },
+                { name: 'justifyfull', className: 'btn-inverse' },
+                null,
+                { name: 'createLink', className: 'btn-pink' },
+                { name: 'unlink', className: 'btn-pink' },
+                null,
+                { name: 'insertImage', className: 'btn-success' },
+                null,
+                'foreColor',
+                null,
+                { name: 'undo', className: 'btn-grey' },
+                { name: 'redo', className: 'btn-grey' }
+            ],
+            'wysiwyg': {
+                fileUploadError: showErrorAlert
+            }
+        }).prev().addClass('wysiwyg-style2');
+
+
+
+
+
+        $('[data-toggle="buttons"] .btn').on('click', function (e) {
+            var target = $(this).find('input[type=radio]');
+            var which = parseInt(target.val());
+            var toolbar = $('#Description').prev().get(0);
+            if (which == 1 || which == 2 || which == 3) {
+                toolbar.className = toolbar.className.replace(/wysiwyg\-style(1|2)/g, '');
+                if (which == 1) $(toolbar).addClass('wysiwyg-style1');
+                else if (which == 2) $(toolbar).addClass('wysiwyg-style2');
+            }
+        });
+
+
+
+
+        //Add Image Resize Functionality to Chrome and Safari
+        //webkit browsers don't have image resize functionality when content is editable
+        //so let's add something using jQuery UI resizable
+        //another option would be opening a dialog for user to enter dimensions.
+        if (typeof jQuery.ui !== 'undefined' && /applewebkit/.test(navigator.userAgent.toLowerCase())) {
+
+            var lastResizableImg = null;
+            function destroyResizable() {
+                if (lastResizableImg == null) return;
+                lastResizableImg.resizable("destroy");
+                lastResizableImg.removeData('resizable');
+                lastResizableImg = null;
+            }
+
+            var enableImageResize = function () {
+                $('.wysiwyg-editor')
+                    .on('mousedown', function (e) {
+                        var target = $(e.target);
+                        if (e.target instanceof HTMLImageElement) {
+                            if (!target.data('resizable')) {
+                                target.resizable({
+                                    aspectRatio: e.target.width / e.target.height,
+                                });
+                                target.data('resizable', true);
+
+                                if (lastResizableImg != null) {//disable previous resizable image
+                                    lastResizableImg.resizable("destroy");
+                                    lastResizableImg.removeData('resizable');
+                                }
+                                lastResizableImg = target;
+                            }
+                        }
+                    })
+                    .on('click', function (e) {
+                        if (lastResizableImg != null && !(e.target instanceof HTMLImageElement)) {
+                            destroyResizable();
+                        }
+                    })
+                    .on('keydown', function () {
+                        destroyResizable();
+                    });
+            }
+
+            enableImageResize();
+
+            /**
+            //or we can load the jQuery UI dynamically only if needed
+            if (typeof jQuery.ui !== 'undefined') enableImageResize();
+            else {//load jQuery UI if not loaded
+                $.getScript($path_assets+"/js/jquery-ui-1.10.3.custom.min.js", function(data, textStatus, jqxhr) {
+                    if('ontouchend' in document) {//also load touch-punch for touch devices
+                        $.getScript($path_assets+"/js/jquery.ui.touch-punch.min.js", function(data, textStatus, jqxhr) {
+                            enableImageResize();
+                        });
+                    } else	enableImageResize();
+                });
+            }
+            */
+        }
+    });
+</script>
+
+
+<script id="picture753169306-qq-template" type="text/template">
+    <div class="qq-uploader-selector qq-uploader">
+        <div class="qq-upload-drop-area-selector qq-upload-drop-area" qq-hide-dropzone>
+            <span>将文件上传</span>
+        </div>
+        <div class="qq-upload-button-selector qq-upload-button">
+            <div>上传一个文件</div>
+        </div>
+        <span class="qq-drop-processing-selector qq-drop-processing">
+            <span>正在上传文件...</span>
+            <span class="qq-drop-processing-spinner-selector qq-drop-processing-spinner"></span>
+        </span>
+        <ul class="qq-upload-list-selector qq-upload-list">
+            <li>
+                <div class="qq-progress-bar-container-selector">
+                    <div class="qq-progress-bar-selector qq-progress-bar"></div>
+                </div>
+                <span class="qq-upload-spinner-selector qq-upload-spinner"></span>
+                <span class="qq-edit-filename-icon-selector qq-edit-filename-icon"></span>
+                <span class="qq-upload-file-selector qq-upload-file"></span>
+                <input class="qq-edit-filename-selector qq-edit-filename" tabindex="0" type="text">
+                <span class="qq-upload-size-selector qq-upload-size"></span>
+                <a class="qq-upload-cancel-selector qq-upload-cancel" href="#">取消</a>
+                <a class="qq-upload-retry-selector qq-upload-retry" href="#">重试</a>
+                <a class="qq-upload-delete-selector qq-upload-delete" href="#">删除</a>
+                <span class="qq-upload-status-text-selector qq-upload-status-text"></span>
+            </li>
+        </ul>
+    </div>
+</script>
+<script src="/Scripts/fineuploader/jquery.fineuploader-4.2.2.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#picture753169306").fineUploader({
+            request: {
+                endpoint: '/Admin/Picture/AsyncUpload'
+            },
+            template: "picture753169306-qq-template",
+            multiple: false
+        }).on("complete", function (event, id, name, responseJSON, xhr) {
+            if (responseJSON.success) {
+                $("#picture753169306image").html("<img src='" + responseJSON.imageUrl + "' width='100'/>");
+                $("#picture753169306value input").val(responseJSON.imageUrl);
+                $("#picture753169306remove").show();
+            }
+        });
+        $("#picture753169306remove").click(function (e) {
+            $("#picture753169306image").html("<img src='/content/images/default-image_100.gif' />");
+            $("#picture753169306value input").val("");
+            $(this).hide();
+        });
+    });
+</script>
+
+<script src="/Content/js/fuelux/fuelux.spinner.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#spinner1').ace_spinner({ value: @Model.DisplayOrder, min: 0, max: 9999, step: 1, btn_up_class: 'btn-info', btn_down_class: 'btn-info' })
+            .on('change', function () {
+                //alert(this.value)
+            });
+    })
+</script>

@@ -25,6 +25,8 @@ namespace LxsWeb
             var dependencyResolver = new LxsDependencyResolver();
             DependencyResolver.SetResolver(dependencyResolver);
 
+
+
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);

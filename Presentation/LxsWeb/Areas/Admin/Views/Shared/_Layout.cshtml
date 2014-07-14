@@ -13,15 +13,14 @@
           <link rel="stylesheet" href="~/Content/CSS/font-awesome-ie7.min.css" />
         <![endif]-->
     <!-- page specific plugin styles -->
-    
     @RenderSection("styles", required: false)
     <!-- ace styles -->
 
     <link rel="stylesheet" href="~/Content/CSS/ace.min.css" />
     <link rel="stylesheet" href="~/Content/CSS/ace-rtl.min.css" />
     <link rel="stylesheet" href="~/Content/CSS/ace-skins.min.css" />
-    
-  
+
+
 
     <!--[if lte IE 8]>
       <link rel="stylesheet" href="~/Content/CSS/ace-ie.min.css" />
@@ -35,6 +34,79 @@
     <script src="~/Content/Js/html5shiv.js"></script>
     <script src="~/Content/Js/respond.min.js"></script>
     <![endif]-->
+    <!-- basic scripts -->
+    <!--[if !IE]> -->
+    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+    <![endif]-->
+    <!--[if !IE]> -->
+
+    <script type="text/javascript">
+        window.jQuery || document.write("<script src='/Content/js/jquery-2.0.3.min.js'>" + "<" + "script>");
+    </script>
+
+    <!-- <![endif]-->
+    <!--[if IE]>
+    <script type="text/javascript">
+     window.jQuery || document.write("<script src='/Content/js/jquery-1.10.2.min.js'>"+"<"+"script>");
+    </script>
+    <![endif]-->
+
+
+    <script type="text/javascript">
+        if ("ontouchend" in document) document.write("<script src='~/Content/Js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
+    </script>
+    <script type="text/javascript" src="/Scripts/admin.common.js"></script>
+
+
+    <script src="~/Content/Js/bootstrap.min.js"></script>
+    <script src="~/Content/Js/typeahead-bs2.min.js"></script>
+
+    <!-- page specific plugin scripts -->
+
+    @*<script src="~/Content/Js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="~/Content/Js/jquery.ui.touch-punch.min.js"></script>
+    <script src="~/Content/Js/bootbox.min.js"></script>*@
+
+    <!-- ace scripts -->
+
+    <script src="~/Content/Js/ace-elements.min.js"></script>
+    <script src="~/Content/Js/ace.min.js"></script>
+
+    <!-- inline scripts related to this page -->
+
+    <script type="text/javascript">
+        jQuery(function ($) {
+            /* initialize the external events
+                -----------------------------------------------------------------*/
+
+            $('#external-events div.external-event').each(function () {
+
+                // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
+                // it doesn't need to have a start or end
+                var eventObject = {
+                    title: $.trim($(this).text()) // use the element's text as the event title
+                };
+
+                // store the Event Object in the DOM element so we can get to it later
+                $(this).data('eventObject', eventObject);
+
+                // make the event draggable using jQuery UI
+                $(this).draggable({
+                    zIndex: 999,
+                    revert: true,      // will cause the event to go back to its
+                    revertDuration: 0  //  original position after the drag
+                });
+
+            });
+
+            /* initialize the calendar
+            -----------------------------------------------------------------*/
+        })
+    </script>
+    @RenderSection("scripts", required: false)
 </head>
 <body>
 
@@ -337,77 +409,7 @@
         </a>
     </div>
     <!-- /.main-container -->
-    <!-- basic scripts -->
-    <!--[if !IE]> -->
-    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
-    <!-- <![endif]-->
-    <!--[if IE]>
-    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
-    <![endif]-->
-    <!--[if !IE]> -->
 
-    <script type="text/javascript">
-        window.jQuery || document.write("<script src='/Content/js/jquery-2.0.3.min.js'>" + "<" + "script>");
-    </script>
-
-    <!-- <![endif]-->
-    <!--[if IE]>
-    <script type="text/javascript">
-     window.jQuery || document.write("<script src='/Content/js/jquery-1.10.2.min.js'>"+"<"+"script>");
-    </script>
-    <![endif]-->
-
-
-    <script type="text/javascript">
-        if ("ontouchend" in document) document.write("<script src='~/Content/Js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
-    </script>
-    <script src="~/Content/Js/bootstrap.min.js"></script>
-    <script src="~/Content/Js/typeahead-bs2.min.js"></script>
-
-    <!-- page specific plugin scripts -->
-
-    <script src="~/Content/Js/jquery-ui-1.10.3.custom.min.js"></script>
-    <script src="~/Content/Js/jquery.ui.touch-punch.min.js"></script>
-    <script src="~/Content/Js/bootbox.min.js"></script>
-
-    <!-- ace scripts -->
-
-    <script src="~/Content/Js/ace-elements.min.js"></script>
-    <script src="~/Content/Js/ace.min.js"></script>
-
-    <!-- inline scripts related to this page -->
-
-    <script type="text/javascript">
-        jQuery(function ($) {
-            /* initialize the external events
-                -----------------------------------------------------------------*/
-
-            $('#external-events div.external-event').each(function () {
-
-                // create an Event Object (http://arshaw.com/fullcalendar/docs/event_data/Event_Object/)
-                // it doesn't need to have a start or end
-                var eventObject = {
-                    title: $.trim($(this).text()) // use the element's text as the event title
-                };
-
-                // store the Event Object in the DOM element so we can get to it later
-                $(this).data('eventObject', eventObject);
-
-                // make the event draggable using jQuery UI
-                $(this).draggable({
-                    zIndex: 999,
-                    revert: true,      // will cause the event to go back to its
-                    revertDuration: 0  //  original position after the drag
-                });
-
-            });
-
-            /* initialize the calendar
-            -----------------------------------------------------------------*/
-        })
-    </script>
-
-    @RenderSection("scripts", required: false)
 
     <script src="~/Content/Js/niqiu.js"></script>
 </body>

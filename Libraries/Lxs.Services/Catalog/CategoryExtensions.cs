@@ -77,5 +77,41 @@ namespace Lxs.Services.Catalog
             }
             return result;
         }
+        public static string GetFormattedBreadCrumb(this Category category,
+            IList<Category> allCategories,
+            string separator = ">>")
+        {
+            if (category == null)
+                throw new ArgumentNullException("category");
+
+            if (allCategories == null)
+                throw new ArgumentNullException("category");
+
+            string result = string.Empty;
+
+            //used to prevent circular references 
+            var alreadyProcessedCategoryIds = new List<int>() { };
+
+            while (category != null && //not null 
+                   !category.Deleted && //not deleted 
+                   !alreadyProcessedCategoryIds.Contains(category.Id)) //prevent circular references 
+            {
+                if (String.IsNullOrEmpty(result))
+                {
+                    result = category.Name;
+                }
+                else
+                {
+                    result = string.Format("{0} {1} {2}", category.Name, separator, result);
+                }
+
+                alreadyProcessedCategoryIds.Add(category.Id);
+
+                category = (from c in allCategories
+                            where c.Id == category.ParentCategoryId
+                            select c).FirstOrDefault();
+            }
+            return result;
+        }
     }
 }

@@ -1,0 +1,9 @@
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Release\Lxs.Core.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Release\Lxs.Core.pdb
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Release\Autofac.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Release\Autofac.Integration.Mvc.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Release\Autofac.xml
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\bin\Release\Autofac.Integration.Mvc.xml
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\obj\Release\Lxs.Core.csprojResolveAssemblyReference.cache
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\obj\Release\Lxs.Core.dll
+E:\github\gxmLxsWeb\Libraries\Lxs.Core\obj\Release\Lxs.Core.pdb

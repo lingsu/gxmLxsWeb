@@ -25,6 +25,15 @@ namespace Lxs.Admin.Controllers
             var model = new CategoryListModel();
             return View(model);
         }
+        public ActionResult Create()
+        {
+            var model = new CategoryModel();
+            model.PageSize = 4;
+            model.Published = true;
+            PrepareAllCategoriesModel(model);
+
+            return View(model);
+        }
         [HttpPost]
         public ActionResult List(DataSourceRequest command, CategoryListModel model)
         {
@@ -44,9 +53,26 @@ namespace Lxs.Admin.Controllers
         }
 
 
-        public ActionResult Create()
+        [NonAction]
+        protected void PrepareAllCategoriesModel(CategoryModel model)
         {
-            return View();
+            if (model == null)
+                throw new ArgumentNullException("model");
+
+            model.AvailableCategories.Add(new SelectListItem()
+            {
+                Text = "顶级类",
+                Value = "0"
+            });
+            var categories = _categoryService.GetAllCategories(showHidden: true);
+            foreach (var c in categories)
+            {
+                model.AvailableCategories.Add(new SelectListItem()
+                {
+                    Text = c.GetFormattedBreadCrumb(categories),
+                    Value = c.Id.ToString()
+                });
+            }
         }
     }
 }
